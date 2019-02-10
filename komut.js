@@ -62,7 +62,7 @@ static async ascii(yazı) {
 		axios.get(`http://artii.herokuapp.com/make?text=${yazı}`)
 			.then(ascii => {
 				if (ascii.data.length > 1999) {
-					return this.message.channel.send('Ascii formatındaki mesaj çok uzun geldi xD Biraz daha kısa bir argüman dene').then(msg => msg.delete({ timeout: 2000 }));
+					return this.message.channel.send('Ascii formatındaki mesaj biraz daha kısa bir metin dene').then(msg => msg.delete({ timeout: 2000 }));
 				}
 				return this.message.channel.send(`\`\`\`${ascii.data}\`\`\``);
 			})
@@ -78,7 +78,7 @@ this.message.channel.bulkDelete(miktar).then(() => {
   }).then(messages => this.message.channel.bulkDelete(messages));
     const sohbetsilindi = new Discord.RichEmbed()
     .setColor('#f558c9')
-    .setDescription(messagecount+ " adet mesaj sildim. Temizlik bitmiştir :3")
+    .setDescription(messagecount+ " adet mesaj sildim.")
     this.message.channel.send(sohbetsilindi)
 })
     

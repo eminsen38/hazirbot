@@ -326,7 +326,7 @@ static async tekrar() {
     await handleVideo(vi2, this.message, voiceChannel, true);
   const PlayingListAdd = new RichEmbed()
   .setColor("RANDOM")
-  .setDescription(`[${u.title}](https://www.youtube.com/watch?v=${u.id}) adlı şarkı bitince tekrar oynatılacak!`)
+  .setDescription(`[${u.title}](https://www.youtube.com/watch?v=${u.id}) adlı şarkı bitinceye tekrar oynatılacak!`)
   return this.message.channel.send(PlayingListAdd);
 
   async function handleVideo(video, message, voiceChannel, playlist = false) {

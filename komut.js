@@ -171,7 +171,7 @@ this.message.channel.send(atasozu)
       if (!sebep) return this.message.channel.send(embed);
       db.set(`afks_${this.message.author.id}`, sebep)
   var embed = new Discord.RichEmbed()
-        .setDescription(`Artık birileri seni etiketleyince onlara **${sebep}** diyeceğim.`)
+        .setDescription(`Artık birileri seni etiketleyince kişiye **${sebep}** diyeceğim.`)
   .setColor("#f558c9")
         this.message.channel.send(embed)
   }
